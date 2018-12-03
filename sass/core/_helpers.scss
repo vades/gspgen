@@ -270,6 +270,12 @@
 
 /*Fonts
 -------------------------------------------------- */
+.font-serif {
+  font-family: $font-serif;
+}
+.font-sans-serif {
+  font-family: $font-sans-serif;
+}
 .font-light {
   font-weight: $font-weight-light;
 }

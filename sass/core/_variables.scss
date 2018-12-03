@@ -55,7 +55,9 @@ $child_cols: 12;
 $child_cols_gutter:$spacing; 
 
 // fonts
-$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-sans-serif: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+$font-serif: Georgia, "Bitstream Charter", serif;
+$font-family: $font-sans-serif;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-heavy: 700;
