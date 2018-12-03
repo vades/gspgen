@@ -1,0 +1,97 @@
+/* Layout
+-------------------------------------------------- */
+// Debug
+#header>section,
+#asideLeft,
+#main {
+  border: solid 1px red;
+}
+
+
+// Page
+#page {
+  @include displayFlex();
+  @include justifyContent(space-between);
+  //height: 100%;
+  flex: 1;
+}
+
+.sticky-header {
+  #page {
+    padding-top: $header-h-s;
+  }
+}
+
+/* Small devices
+-------------------------------------------------- */
+@include mqMax($break-m - 1) {
+  #headerBrand {
+    width: 15%;
+  }
+
+  #headerContent {
+    width: 85%;
+  }
+
+  #main {
+    width: 100%;
+    >article {
+      padding: $spacing;
+    }
+  }
+}
+
+/* Large devices
+-------------------------------------------------- */
+@include mqMin($break-m) {
+  .sticky-header {
+    #page {
+      padding-top: $header-h;
+    }
+  }
+
+  // Columns
+  #asideLeft,
+  #main {
+    flex: 1 0 auto;
+  }
+  #main{
+    >article {
+      padding: $spacing-double;
+    }
+  }
+
+  /* Layout-wrapper */
+  .layout-lm {
+
+    #headerBrand,
+    #asideLeft {
+      max-width: 20%;
+    }
+
+    #headerContent,
+    #main {
+      max-width: 80%;
+    }
+  }
+
+  /* Aside small  */
+  .aside-s {
+
+    // Set elemts width
+    #headerBrand,
+    #asideLeft {
+      max-width: 5%;
+
+      // text-align: center;
+      .material-icons {
+        font-size: 160%;
+      }
+    }
+
+    #headerContent,
+    #main {
+      max-width: 95%;
+    }
+  }
+}

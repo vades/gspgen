@@ -1,0 +1,69 @@
+/* Default skin
+-------------------------------------------------- */
+// Brand
+$primary-color: #000000;
+$secondary-color: #3f98b8;
+
+// Primary tints
+$primary-color-90: #0d0d0d;
+$primary-color-80: #262626;
+$primary-color-70: #404040;
+$primary-color-60: #595959;
+$primary-color-50: #737373;
+$primary-color-40: #8c8c8c;
+$primary-color-30: #a6a6a6;
+$primary-color-20: #bfbfbf;
+$primary-color-10: #d9d9d9;
+
+// Secondary tints
+$secondary-color-90: #071013;
+$secondary-color-80: #142f39;
+$secondary-color-70: #214e5f;
+$secondary-color-60: #2e6e85;
+$secondary-color-50: #3b8dab;
+$secondary-color-40: #54a7c4;
+$secondary-color-30: #7abad1;
+$secondary-color-20: #a0cede;
+$secondary-color-10: #c6e2eb;
+
+// Fonts
+$font-color: $primary-color;
+$font-color-inverse: $primary-color-10;
+$font-color-secondary: $primary-color-40;
+$heading-color: $primary-color-60;
+$input-color: $primary-color;
+$button-color: $primary-color;
+$disabled-color: $primary-color-50;
+$a-color: $primary-color-80;
+$a-hover-color: $primary-color-90;
+
+// Backgrounds
+$body-bcg-color: #ffffff;
+$bcg-color: #ffffff;
+$bcg-color-inverse: $primary-color-80;
+$input-bcg-color: $bcg-color;
+$input-bcg-disabled-color: #ccc;
+$button-bcg-color: $primary-color-30;
+$table-strip-bcg-color: $primary-color-10;
+$table-hover-bcg-color: $primary-color-20;
+
+// Borders
+$border-color: $primary-color-20;
+
+// Notifications, responses, etc.
+$success-color: #80AD80; 
+$success-color-10: #d1e1d1;
+$info-color: #5bc0de;
+$info-color-10: #cadae8;
+$warning-color: #f0ad4e;
+$warning-color-10: #fdf4e7;
+$danger-color: #d9534f;
+$danger-color-10: #faebea;
+
+$success-bcg-color: lighten($success-color, 30%);
+$info-bcg-color: lighten($info-color, 30%);
+$warning-bcg-color: lighten($warning-color, 30%);
+$danger-bcg-color: lighten($danger-color, 35%);
+
+// Other colors
+$focus-color: #5bc0de;

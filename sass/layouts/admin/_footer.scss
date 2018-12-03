@@ -1,0 +1,20 @@
+/* Footer
+-------------------------------------------------- */
+#footer {
+  background-color: #fff;
+  //border-top: solid 1px $border-color;
+  width: 100%;
+  background-color: $lightest-bcg-color;
+  .bar{
+    padding: $spacing;
+    font-size: 90%;
+    text-align: center;
+    a{ 
+       &::before{
+         content: "\2022";
+         padding: $spacing;
+       }
+     }
+  }
+}
+
