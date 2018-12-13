@@ -1,24 +1,10 @@
-/* Layout m - without  asides
+/* Layout m (main) - without  sidebars
 -------------------------------------------------- */
-body {
-  @include displayFlex();
-  @include flexDirection(column);
-  min-height: 100vh;
-
-  //height: 100%;
-}
-
-
-// Page
-#page {
-  @include displayFlex();
-  @include justifyContent(space-between);
-  //height: 100%;
-  flex: 1;
-}
-
-.sticky-header {
-  #page {
-    padding-top: $header-h-s;
+.layout-m{
+  #main{
+    padding: $spacing;
+    @include mqMin($break-l) {
+      padding: $spacing-double;
+    }
   }
 }

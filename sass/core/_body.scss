@@ -11,19 +11,19 @@ body {
   background-color: $body-bcg-color;
   font-size: $body-font-size;
 
-  // For medium devices
+  // Font size for medium devices
   @include mqMin($break-s) {
     font-size: $body-font-size * 1.05;
   }
 
-  // For large devices
+  // Font size for lmedium devices
   @include mqMin($break-m) {
     font-size: $body-font-size * 1.15;
   }
 
-  // For large devices
+  // Font size for large devices
   @include mqMin($break-l) {
-    font-size: $body-font-size * 1.3;
+    font-size: $body-font-size * 1.25;
   }
 }
 

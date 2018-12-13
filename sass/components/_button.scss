@@ -24,13 +24,24 @@ button,
     outline-offset: -4px;
   }
 
-  /* &:active {
-    transform: scale(0.99);
-  } */
-
   &.is-text {
-    padding: 0 $spacing;
-    border-color: transparent;
+    padding: $spacing-half 0;
+    border: 0;
+    background: transparent;
+
+   /*  &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+    } */
+
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+  &.is-outlined {
     background: transparent;
 
     &:hover,
@@ -45,41 +56,37 @@ button,
     }
   }
 
+
   &.is-disabled {
     cursor: not-allowed;
     border-color: transparent;
     background-color: lighten($button-bcg-color, 10%);
   }
 
-  &.is-cancel {
-    border-color: transparent;
-    background: transparent;
 
-    &:before {
-      content: "\274c"; //&times;
-      font-size: 130%;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: transparent;
-      background: transparent;
-    }
-
-    &:focus {
-      outline: 0;
-      outline-offset: 0;
-    }
+  &.size-xs {
+    font-size: 80%;
+    padding: $spacing-half $spacing;
   }
 
-  &.l {
-    font-size: 120%;
-    padding: $spacing $spacing-and-half;
+  &.size-s {
+    font-size: 90%;
+    padding: $spacing-half $spacing;
   }
 
-  &.xl {
+  &.size-m {
     font-size: 140%;
     padding: $spacing $spacing-and-half;
+  }
+
+  &.size-l {
+    font-size: 160%;
+    padding: $spacing-and-half $spacing-double;
+  }
+
+  &.size-xl {
+    font-size: 200%;
+    padding: $spacing-double $spacing-triple;
   }
 
   &.is-info {

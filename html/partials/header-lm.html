@@ -1,0 +1,49 @@
+
+<body id="body" class="sticky-header aside-inactive">
+  <!-- /////////////////////////////////////// Header ////////////////////////////////////// -->
+  <header id="header">
+    <section>
+      <!-- Bars - on small devices -->
+      <div id="headerBrand">
+        <button type="button" class="is-text hide-min-m margin-r" data-toggle-class="aside-active aside-inactive" aria-controls="body">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- Logo -->
+        <a class="hide-max-s" id="headerLogo" href="index.html">
+          <img src="./img/logo.png">
+        </a>
+      </div>
+      <!-- Navi -->
+      <nav id="headerPrimary">
+        <ul class="horizontal">
+          <li>
+            <a class="page-anchor" href="layout-spa.html">Single page</a>
+          </li>
+          <li>
+            <a class="page-anchor" href="layout-m.html">Layout M</a>
+          </li>
+          <li>
+            <a class="page-anchor" href="layout-lm.html">Layout LM</a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="headerSecondary" class="align-right position-relative grouper">
+        <button class="is-text toggler" aria-expanded="false" aria-haspopup="true" aria-controls="headerUserMenu">
+          <i class="fas fa-user-circle fa-lg"></i> <span class="hide-max-s">User Name <i class="fas fa-angle-down"></i></span>
+        </button>
+        <ul id="headerUserMenu" class="dropdown right has-arrow toggle-me" tabindex="-1" role="menu">
+          <li><a href="index.html" role="menuitem"><i class="fas fa-home fa-fw"></i> <span>Home</span> </a></li>
+          <li><a href="layout-spa.html" role="menuitem"><i class="fas fa-list-alt fa-fw"></i> <span>Single page</span></a></li>
+          <li><a href="layout-m.html" role="menuitem"><i class="fas fa-clipboard fa-fw"></i> <span>Without sidebar</span></a></li>
+          <li><a href="layout-lm.html" role="menuitem"><i class="fas fa-columns fa-fw"></i> <span>Left sidebar</span></a></li>
+         
+         
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <section id="page" class="layout-lm">
+      <!-- /////////////////////////////////////// Aside left ////////////////////////////////////// -->
+      @@include('./aside-left.html') 
+     <!-- /////////////////////////////////////// Main ////////////////////////////////////// -->
+     <main id="main">

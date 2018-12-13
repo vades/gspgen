@@ -11,9 +11,9 @@
   >* {
     @include flexBasis(100%);
 
-    @if $grid_gutter !='0' {
+    /* @if $grid_gutter !='0' {
       margin: 0 $grid_gutter/2;
-    }
+    } */
   }
 
   // All devices

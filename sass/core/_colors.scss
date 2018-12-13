@@ -4,16 +4,27 @@
   color: $primary-color;
 }
 
-.primary-10 {
-  color: $primary-color-10;
-}
-
 .secondary {
   color: $secondary-color;
 }
 
-.secondary-10 {
-  color: $secondary-color-10;
+.lightest {
+  color: $lightest-color;
+}
+
+.light {
+  color: $light-color;
+}
+
+.dark {
+  color: $dark-color;
+}
+
+.darkest {
+  color: $darkest-color;
+}
+.active {
+  color: $active-color;
 }
 
 .info {
@@ -42,108 +53,122 @@
   background-color: $primary-color;
 }
 
-.primary-10-bcg  {
-  background-color: $primary-color;
-}
-
-.secondary-bcg  {
+.secondary-bcg {
   background-color: $secondary-color;
 }
 
-.secondary-10-bcg  {
-  background-color: $secondary-color;
-}
-
-.info-bcg  {
+.info-bcg {
   background-color: $info-color;
 }
 
-.success-bcg  {
+.success-bcg {
   background-color: $success-color;
 }
 
-.warning-bcg  {
+.warning-bcg {
   background-color: $warning-color;
 }
 
-.danger-bcg  {
+.danger-bcg {
   background-color: $danger-color;
 }
 
 /* Basic colors
 -------------------------------------------------- */
-.white{
+.white {
   color: $white;
 }
-.black{
+
+.black {
   color: $black;
 }
-.blue{
+
+.blue {
   color: $blue;
 }
-.cyan{
+
+.cyan {
   color: $cyan;
 }
-.turquoise{
+
+.turquoise {
   color: $turquoise;
 }
-.yellow{
+
+.yellow {
   color: $yellow;
 }
-.green{
+
+.green {
   color: $green;
 }
-.red{
+
+.red {
   color: $red;
 }
-.purple{
+
+.purple {
   color: $purple;
 }
-.orange-red{
+
+.orange-red {
   color: $orange-red;
 }
-.orange{
+
+.orange {
   color: $orange;
 }
-.pink{
+
+.pink {
   color: $pink;
 }
 
 /* Baisic background colors
 -------------------------------------------------- */
-.white-bcg{
+.white-bcg {
   background-color: $white;
 }
-.black-bcg{
+
+.black-bcg {
   background-color: $black;
 }
-.blue-bcg{
+
+.blue-bcg {
   background-color: $blue;
 }
-.cyan-bcg{
+
+.cyan-bcg {
   background-color: $cyan;
 }
-.turquoise-bcg{
+
+.turquoise-bcg {
   background-color: $turquoise;
 }
-.yellow-bcg{
+
+.yellow-bcg {
   background-color: $yellow;
 }
-.green-bcg{
+
+.green-bcg {
   background-color: $green;
 }
-.red-bcg{
+
+.red-bcg {
   background-color: $red;
 }
-.purple-bcg{
+
+.purple-bcg {
   background-color: $purple;
 }
-.orange-red-bcg{
+
+.orange-red-bcg {
   background-color: $orange-red;
 }
-.orange-bcg{
+
+.orange-bcg {
   background-color: $orange;
 }
-.pink-bcg{
+
+.pink-bcg {
   background-color: $pink;
 }

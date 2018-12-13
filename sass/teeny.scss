@@ -1,65 +1,51 @@
-/* Global variables
+/* Shared
 -------------------------------------------------- */
-@import "core/_variables";
-@import "custom/_variables";
-
-/* Skin
--------------------------------------------------- */
-@import "core/_skin";
-@import "custom/_skin";
+@import "_shared";
 
 /* Vendors
 -------------------------------------------------- */
 @import "vendor/normalize/normalize";
 @import "vendor/minireset/minireset";
 
-/* Compass style http://compass-style.org/reference/compass/css3/
--------------------------------------------------- */
-//@import "compass/css3";
-
-/* Mixins
--------------------------------------------------- */
-@import "core/_mixins";
-
 /* Core
 -------------------------------------------------- */
 @import "core/body";
 @import "core/typo";
+@import "core/grid";
+@import "core/flex";
+@import "core/dimensions";
+@import "core/display";
 
 /* Components
 -------------------------------------------------- */
 @import "components/icon";
 @import "components/page-header";
 @import "components/nav";
+@import "components/form";
 @import "components/input";
 @import "components/button";
 @import "components/item-group";
 @import "components/dropdown";
 @import "components/section";
-@import "components/tab";
-@import "components/grid";
+@import "components/list";
 @import "components/badge";
 @import "components/table";
-@import "components/list";
+@import "components/tablist.1.0.0";
 @import "components/log";
 @import "components/panel";
 @import "components/accordion";
 @import "components/card";
+@import "components/gallery";
+@import "components/pagination.1.0.0";
 
 /* Layout
 -------------------------------------------------- */
 @import "layouts/layout-m";
+@import "layouts/layout-lm";
+@import "layouts/aside-left";
 
 /* Helpers
 -------------------------------------------------- */
 @import "core/helpers";
 @import "core/colors"; 
-
-/* Custom
--------------------------------------------------- */
-// Single page
-@import "custom/singlepage/header";
-// Common
-@import "custom/overrides";
-@import "custom/footer"; 
 

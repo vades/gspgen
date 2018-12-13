@@ -6,14 +6,16 @@
 /* Mixin - inline group items
 -------------------------------------------------- */
 @mixin inlineItemGroup() {
+
   .fied,
   .item,
   #{$input-type-text} {
-  
+
     &:not(:last-child) {
       border-width: 1px 0 1px 1px;
     }
-   &:first-child {
+
+    &:first-child {
       border-radius: $border-radius 0 0 $border-radius;
     }
 
@@ -24,6 +26,7 @@
 
   .field {
     flex: 1;
+
     &:not(:first-child) {
       border-left: 0;
     }
@@ -37,62 +40,116 @@
 /* Box Items
 -------------------------------------------------- */
 .item-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   @include displayFlex();
   @include flexDirection(column);
   @include justifyContent(center);
-  &.inline-flex{
-    @include displayInlineFlex();
-    
-  }
+
   .fied,
   .item,
   #{$input-type-text} {
     //width: 100%;
-    padding:$input-padding;
+    padding: $input-padding;
     font: inherit;
     font-weight: normal;
     border-radius: 0;
     border: 1px solid $border-color;
-   
+
     &:not(:last-child) {
       border-width: 1px 1px 0 1px;
     }
-   &:first-child {
-      border-radius: $border-radius $border-radius  0 0 ;
+
+    &:first-child {
+      border-radius: $border-radius $border-radius 0 0;
     }
 
     &:last-child {
-      border-radius:  0 0 $border-radius $border-radius;
+      border-radius: 0 0 $border-radius $border-radius;
     }
-    
+
+  }
+
+  &.inline-flex {
+    @include displayInlineFlex();
+
+  }
+
+  &.is-menu:not(.group-inline) {
+    >* {
+      a{
+        @include displayFlex();
+        @include alignItems(center);
+        @include justifyContent(space-between);
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      
+     
+    }
+  }
+
+  &.has-ctrl:not(.group-inline) {
+    >* {
+      @include displayFlex();
+      @include alignItems(center);
+      @include justifyContent(space-between);
+    }
+  }
+
+  /* Striped  */
+  &.is-striped {
+    *:nth-child(odd) {
+      background-color: $table-strip-bcg-color;
+    }
+  }
+
+  /* Hover */
+  &.has-hover {
+    > *:hover {
+      background-color: $table-hover-bcg-color;
+    }
+  }
+
+  /* Condensed */
+  &.is-condensed {
+    font-size: 90%;
+
+    >* {
+      padding: $spacing-half;
+    }
   }
 
   // Inline display on all devices
-    &.group-inline{
-      @include flexDirection(row);
-      @include inlineItemGroup();
-     }
-   
+  &.group-inline {
+    @include flexDirection(row);
+    @include inlineItemGroup();
+  }
+
   // Inline display only on all Small devices and bigger
   @include mqMin($break-s) {
-    &.group-inline-s{
+    &.group-inline-s {
       @include flexDirection(row);
       @include inlineItemGroup();
-     }
+    }
   }
+
   // Inline display only on all Medium devices and bigger
   @include mqMin($break-m) {
-    &.group-inline-m{
+    &.group-inline-m {
       @include flexDirection(row);
       @include inlineItemGroup();
-     }
+    }
   }
-   // Inline display only on all Large devices and bigger
-   @include mqMin($break-l) {
-     &.group-inline-l{
+
+  // Inline display only on all Large devices and bigger
+  @include mqMin($break-l) {
+    &.group-inline-l {
       @include flexDirection(row);
       @include inlineItemGroup();
-     }
-   }
+    }
+  }
 
 }

@@ -5,4 +5,7 @@
   @include justifyContent(space-between);
   @include alignItems(center);
   margin-bottom: $spacing-double;
+  /* >* {
+    flex: 1 1 0;
+  } */
 }

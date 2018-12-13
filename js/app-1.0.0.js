@@ -4,17 +4,6 @@
 (function ($) {
 
   /**
- * Smooth scroll
- */
-  //$('a[href*=\\#]').on('click', function(event){
-  $('.page-anchor').on('click', function (event) {
-    event.preventDefault();
-    $('html,body').animate({
-      scrollTop: $(this.hash).offset().top
-    }, 700);
-  });
-
-  /**
    * Toggle .toggle-me sibling element with "is-on/is-off"class
    * Add "parent-focus" class to parent with grouper class
    */
@@ -23,18 +12,27 @@
     $(this).parent().closest('.grouper').toggleClass('parent-focus');
   });
 
-
   /**
-   * Toggle .toggle-me sibling element with is-on/is-off class
-   * Add "parent-focus" class to parent with grouper class
+   * Gets element by ID and assigns a given class
+   * Add "parent-focus" class to parent with grouper class (if any)
    */
   $('[data-toggle-class]').on('click', function (e) {
     var selector = $(this);
     var cssClass = selector.data('toggle-class');
     var target = '#' + selector.attr('aria-controls');
+    var hasAriaExpanded = $(this).attr('aria-expanded');
     $(target).toggleClass(cssClass);
     $(this).parent().closest('.grouper').toggleClass('parent-focus');
+    
+     // Has aria-expanded attribute - main expand/collapse button
+     if (hasAriaExpanded && hasAriaExpanded.length) {
+      $(this).attr('aria-expanded', function (_, attr) {
+        return attr == 'true' ? false : true;
+      });
+    }
   });
+
+
 
   /**
    * Toggle tabs
@@ -51,6 +49,24 @@
     $(this).attr('aria-selected', true);
     // Removing hidden attr from current tab panel
     $(tabId).removeAttr('hidden').focus();
+    e.preventDefault();
+  });
+  /**
+   * Toggle acordion
+   */
+  $('.accordion-toggle').on('click', function (e) {
+    $(this).attr('aria-expanded', function (_, attr) {
+      return attr == 'true' ? false : true;
+    });
+    $(this).siblings('.accordion').attr('hidden', function (_, attr) {
+      return !attr
+    });
+    if($(this).attr('aria-expanded') == 'true'){
+      $(this).parent().closest('.grouper').toggleClass('parent-focus');
+    }else{
+      $(this).parent().closest('.grouper').removeClass('parent-focus');
+    }
+   
     e.preventDefault();
   });
 

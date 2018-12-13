@@ -42,9 +42,9 @@ $input-type-text:  'input[type=text],input[type=password],input[type=color],inpu
 
 
 // dimensions
-$header-h: 7rem;
-$header-h-s: 5rem;
-$footer-h: 5rem;
+$header-h: 5rem;
+$header-h-s: 5rem;//TODO: deprecated
+$header-h-l: 7rem;
 
 // grid
 $grid_cols: 12;

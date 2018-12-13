@@ -12,12 +12,15 @@
     @include displayFlex();
     @include flexFlow(row);
     @include flexWrap(wrap);
-    >*{
+
+    >* {
       flex: 0 0 50%;
     }
+
     >:first-child {
       font-weight: bold;
       padding-right: $spacing;
+
       &::after {
         content: ':';
       }
@@ -32,20 +35,20 @@ dl {
   dt {
     font-weight: bold;
   }
-}
 
-.inline {
-  @include displayFlex();
-  @include flexFlow(row);
-  @include flexWrap(wrap);
+ .inline {
+    @include displayFlex();
+    @include flexFlow(row);
+    @include flexWrap(wrap);
 
-  dt {
-    flex: 0 0 50%;
-    margin: 0 0 $spacing 0;
-  }
+    dt {
+      flex: 0 0 50%;
+      margin: 0 0 $spacing 0;
+    }
 
-  dd {
-    flex: 0 0 50%;
-    margin: 0 0 $spacing 0;
+    dd {
+      flex: 0 0 50%;
+      margin: 0 0 $spacing 0;
+    }
   }
 }

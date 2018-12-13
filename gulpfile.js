@@ -12,8 +12,6 @@ var gulp = require('gulp'),
   fileinclude = require('gulp-file-include'),
   plumber = require('gulp-plumber');
 
-  //sass.compiler = require('node-sass');
-
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
     //.pipe(plumber())
@@ -24,28 +22,39 @@ gulp.task('sass', function () {
     .pipe(livereload());
 });
 
-gulp.task("concatHome", function () {
-  gulp.src(['html/main/home.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(concat("index.html"))
+gulp.task("concatHtml", function () {
+  gulp.src('./html/main/**/*.html')
+    .pipe(fileinclude())
+    //.pipe(concat("index.html"))
     .pipe(gulp.dest("public"))
     .pipe(livereload());
 });
 
-gulp.task("watch", function () {
-  livereload.listen();
-  return gulp.watch(['html/partials/*.html', 'html/main/*.html', 'sass/**/*.scss', 'img/*', 'js/*'], ['build'])
+/* gulp.task("concatGroups", function () {
+  gulp.src(['html/main/groups.html'])
+    .pipe(fileinclude())
+    //.pipe(concat("index.html"))
+    .pipe(gulp.dest("public"))
+    .pipe(livereload());
+}); */
 
-})
+gulp.task('embedSvgs', () =>
+  gulp.src('public/**/*.html')
+    .pipe(embedSvg())
+    .pipe(gulp.dest('public/')));
+
 
 gulp.task('clean', function () {
   del(['public'])
 });
 
-gulp.task("build", ['sass', 'concatHome'], function () {
+gulp.task("watch", function () {
+  livereload.listen();
+  return gulp.watch(['html/**/*.html','html/**/*.json', 'sass/**/*.scss', 'img/*', 'js/*'], ['build'])
+
+})
+
+gulp.task("build", ['sass', 'concatHtml'], function () {
   return gulp.src(["css/*", "img/*", "js/*"], {
       base: './'
     })

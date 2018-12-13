@@ -238,3 +238,29 @@
     }
   }
 }
+
+// Create element width classes
+@mixin generateWidthClasses($modifier, $cols, $class_name:'.w') {
+  @for $i from 1 through $cols{
+    $iletter: $i*10;
+    #{$class_name}#{$modifier}-#{$iletter} {
+     //@debug $i;
+     width: $i*10%;
+
+    }
+  }
+  #{$class_name}#{$modifier}-25 {
+    width: 25%;
+
+   }
+   #{$class_name}#{$modifier}-33 {
+    width: 33.33333%;
+
+   }
+   #{$class_name}#{$modifier}-75 {
+    width: 75%;
+
+   }
+
+
+}

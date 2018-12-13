@@ -99,156 +99,11 @@
   position: absolute;
 }
 
-/* Hide element
--------------------------------------------------- */
-// Hide element on all devices
-.hide {
-  display: none;
-}
 
-// Hide element up to the Extra Smal devices
-.hide-max-xs {
-  @include mqMax($break-xs - 1) {
-    display: none;
-  }
-}
-
-// Hide element up to the Smal devices
-.hide-max-s {
-  @include mqMax($break-s - 1) {
-    display: none;
-  }
-}
-
-// Hide element up to the Medium devices
-.hide-max-m {
-  @include mqMax($break-m - 1) {
-    display: none;
-  }
-}
-
-// Hide element up to the Large devices
-.hide-max-l {
-  @include mqMax($break-l - 1) {
-    display: none;
-  }
-}
-
-// Hide element from the Extra Smal devices
-.hide-min-xs {
-  @include mqMin($break-xs) {
-    display: none;
-  }
-}
-
-// Hide element from the Smal devices
-.hide-min-s {
-  @include mqMin($break-s) {
-    display: none;
-  }
-}
-
-// Hide element from the Medium devices
-.hide-min-m {
-  @include mqMin($break-m) {
-    display: none;
-  }
-}
-
-// Hide element from the Large devices
-.hide-min-l {
-  @include mqMin($break-l) {
-    display: none;
-  }
-}
-
-
-/* Displays an element as block with 100% width
--------------------------------------------------- */
-// Display inline
-.inline {
-  display: inline;
-}
-// Display block on all devices
-.block {
-  display: block;
-  width: 100%;
-}
-
-// Display block up to the Extra Smal devices
-.block-max-xs {
-  @include mqMax($break-xs - 1) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block up to the Smal devices
-.block-max-s {
-  @include mqMax($break-s - 1) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block up to the Medium devices
-.block-max-m {
-  @include mqMax($break-m - 1) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block up to the Large devices
-.block-max-l {
-  @include mqMax($break-l - 1) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block from the Extra Smal devices
-.block-min-xs {
-  @include mqMin($break-xs) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block from the Smal devices
-.block-min-s {
-  @include mqMin($break-s) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block from the Medium devices
-.block-min-m {
-  @include mqMin($break-m) {
-    display: block;
-    width: 100%;
-  }
-}
-
-// Display block from the Large devices
-.block-min-l {
-  @include mqMin($break-l) {
-    display: block;
-    width: 100%;
-  }
-}
-
-
-/* Displays a horizontal scroll bar if the screen is too smal
--------------------------------------------------- */
-.v-scroll {
-  overflow: auto;
-}
 
 /* Padding
 -------------------------------------------------- */
-.padding{
+.padding {
   padding: $spacing;
 }
 
@@ -268,14 +123,62 @@
   padding: $spacing-half;
 }
 
+/* Margin
+-------------------------------------------------- */
+.margin {
+  margin: $spacing;
+}
+
+.margin-double {
+  margin: $spacing-double;
+}
+
+.margin-triple {
+  margin: $spacing-triple;
+}
+
+.margin-quad {
+  margin: $spacing-quad;
+}
+
+.margin-half {
+  margin: $spacing-half;
+}
+//TODO: deprecated - replace all occurences with margin-b
+.margin-bottom {
+  margin-bottom: $spacing;
+}
+
+.margin-t {
+  margin-top: $spacing;
+}
+
+.margin-r {
+  margin-right: $spacing;
+}
+
+.margin-b {
+  margin-bottom: $spacing;
+}
+
+.margin-l {
+  margin-left: $spacing;
+}
+
+.margin-lr-auto {
+  margin: auto;
+}
+
 /*Fonts
 -------------------------------------------------- */
 .font-serif {
   font-family: $font-serif;
 }
+
 .font-sans-serif {
   font-family: $font-sans-serif;
 }
+
 .font-light {
   font-weight: $font-weight-light;
 }

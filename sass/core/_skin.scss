@@ -37,6 +37,12 @@ $button-color: $primary-color;
 $disabled-color: $primary-color-50;
 $a-color: $primary-color-80;
 $a-hover-color: $primary-color-90;
+$focus-color: #5bc0de;
+$active-color: #5bc0de;
+$light-color: #737373;
+$lightest-color: #737373;
+$dark-color: #262626;
+$darkest-color:#000000;
 
 // Backgrounds
 $body-bcg-color: #ffffff;
@@ -66,8 +72,7 @@ $info-bcg-color: lighten($info-color, 30%);
 $warning-bcg-color: lighten($warning-color, 30%);
 $danger-bcg-color: lighten($danger-color, 35%);
 
-// Other colors
-$focus-color: #5bc0de;
+// Basic colors
 $white: #ffffff;
 $black: #000000;
 $blue: #3273dc;

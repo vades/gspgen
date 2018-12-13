@@ -1,5 +1,16 @@
-/* Various settings
+/* Body
 -------------------------------------------------- */
-[role="button"] {
-  cursor: pointer;
+body {
+  @include displayFlex();
+  @include flexDirection(column);
+  min-height: 100vh;
+}
+
+
+/* Page
+-------------------------------------------------- */
+#page {
+  @include displayFlex();
+  @include justifyContent(space-between);
+  flex: 1;
 }
