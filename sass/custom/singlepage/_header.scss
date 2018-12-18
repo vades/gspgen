@@ -15,7 +15,7 @@
     @include alignItems(center);
     flex: 1 0 auto;
     height: 100%;
-    //padding: $spacing-double;
+    padding: $spacing;
   }
 
   #headerContent {
@@ -36,43 +36,7 @@
 
 /* Small devices
 -------------------------------------------------- */
-@include mqMax($break-m - 1) {
-  
-  #headerLogo{
-    display: none;
-  }
-  #headerToggleAside {
-   margin: 0 auto;
-  }
-}
+
 
 /* Large devices
 -------------------------------------------------- */
-@include mqMin($break-m) {
-  #header{
-    height: $header-h;
-  }
-  #headerContent {
-    padding: 0 $spacing-double;
-  }
-
-  /* Layout with small aside navigation */
-  .aside-s {
-     #headerToggleAside{
-      text-align: center;
-      margin: 0 auto;
-    }
-    #headerLogo {
-      display: none;
-    }
-
-  }
-
-   /* Layout with large aside navigation */
-   .aside-l {
-    #headerBrand {
-      padding: $spacing-double;
-
-    }
-  }
-}

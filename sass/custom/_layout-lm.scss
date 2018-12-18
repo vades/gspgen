@@ -13,7 +13,7 @@
   /* From medium devices
 -------------------------------------------------- */
   @include mqMin($break-m) {
-    #asideLeft {
+    app-aside-left {
       max-width: 15%;
       padding: $spacing-double;
     }

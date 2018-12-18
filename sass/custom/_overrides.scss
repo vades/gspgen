@@ -1,3 +1,4 @@
+//@import "~sass/_shared.scss";
 /* Body
 -------------------------------------------------- */
 body {
@@ -7,10 +8,18 @@ body {
 }
 
 
-/* Page
+/* Page / App Root
 -------------------------------------------------- */
 #page {
   @include displayFlex();
   @include justifyContent(space-between);
   flex: 1;
+}
+
+/* Angular embeded elements
+-------------------------------------------------- */
+app-root {
+  @include displayFlex();
+  @include flexDirection(column);
+  min-height: 100vh;
 }

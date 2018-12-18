@@ -5,12 +5,12 @@
 -------------------------------------------------- */
 @include mqMax($break-m - 1) {
   .aside-inactive{
-    #asideLeft {
+    app-aside-left {
       display: none;
     }
   }
   .aside-active{
-    #asideLeft {
+    app-aside-left {
       background-color: $bcg-color;
       position: fixed;
       top: 0;
